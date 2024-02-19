@@ -12,8 +12,6 @@ Figma: https://www.figma.com/file/cObge8tamp27Pwme3wL6bz/Podda-(Community)-(Copy
 
 ### Local setup
 
-todo: 
-
 Python: 3.10.8 -> pip install -r requirements.txt
 
 cd Untitled
