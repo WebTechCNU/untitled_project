@@ -1,12 +1,5 @@
 ## This is the repo for untitled_project
 
-### Project Setup:
-Python: 3.10.8 -> pip install -r requirements.txt
-
-cd Untitled
-
-python manage.py runserver
-
 ### App description
 
 todo: describe your app here
@@ -19,7 +12,13 @@ Figma: https://www.figma.com/file/cObge8tamp27Pwme3wL6bz/Podda-(Community)-(Copy
 
 ### Local setup
 
-todo: describe how to run app locally
+todo: 
+
+Python: 3.10.8 -> pip install -r requirements.txt
+
+cd Untitled
+
+python manage.py runserver
 
 ### Team
 
