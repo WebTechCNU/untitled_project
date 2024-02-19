@@ -15,7 +15,8 @@ todo: describe how to run app locally
 
 ### backend info
 
-Notion: https://www.notion.so/team/c3006c92-77b9-4ab5-8a1f-20dbbed05c8a/join
+Notion: 
+https://www.notion.so/team/c3006c92-77b9-4ab5-8a1f-20dbbed05c8a/join
 Project Setup:
 Python: 3.10.8 -> pip install -r requirements.txt
 
