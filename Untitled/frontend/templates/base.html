@@ -8,22 +8,17 @@
 
 		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
-		<script src="{% 'js/main.js' %}" defer></script>
+		<script src="{% static 'js/main.js' %}" defer></script>
 		<script src="{% static 'js/menuBtn.js' %}" defer></script>
 	</head>
 	<body>
 		{% block content %}
 		<div class="wrapper">
 			<header class="header">
-				<div class="containe">
+				<div class="container">
 					<nav class="nav">
 						<div class="tabs__btn">
-							<button
-								class="tabs__btn-item tabs__btn-item--active"
-								data-button="content-1"
-							>
-								1
-							</button>
+							<button class="tabs__btn-item tabs__btn-item--active" data-button="content-1">1</button>
 							<button class="tabs__btn-item" data-button="content-2">2</button>
 							<button class="tabs__btn-item" data-button="content-3">3</button>
 							<button class="tabs__btn-item" data-button="content-4">3</button>
