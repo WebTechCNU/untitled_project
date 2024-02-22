@@ -38,3 +38,31 @@ function clickSvg(evt) {
 
 	svgTarget.classList.add('tabs__btn-item-svg--active')
 }
+
+const registerBtn = document.querySelectorAll('.registers__group-form-btn'),
+	registerContent = document.querySelectorAll(
+		'.registers__group-form-content-item'
+	)
+
+registerBtn.forEach(function (element) {
+	element.addEventListener('click', registerOpen)
+})
+
+function registerOpen(event) {
+	const registerBtnTarget = event.currentTarget
+	const regButton = registerBtnTarget.dataset.id
+
+	registerBtn.forEach(function (item) {
+		item.classList.remove('registers__group-form-btn--active')
+	})
+
+	registerBtnTarget.classList.add('registers__group-form-btn--active')
+
+	registerContent.forEach(function (item) {
+		item.classList.remove('registers__group-form-content-item--active')
+	})
+
+	document
+		.querySelector(`#${regButton}`)
+		.classList.add('registers__group-form-content-item--active')
+}
