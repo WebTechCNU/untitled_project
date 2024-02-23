@@ -78,6 +78,7 @@
 										action=""
 										class="registers__group-form-content-register"
 										id="form-registrtion"
+										onsubmit="return checkUsernameAvailability()"
 									>
 										<h1 class="registers__group-forms-title">Name</h1>
 										<input
@@ -87,6 +88,7 @@
 											placeholder="Please Enter your Username"
 											required
 										/>
+										<p class="checkNikname"></p>
 										<h2 class="registers__group-forms-title">Email Address</h2>
 										<input
 											type="email"
@@ -105,7 +107,7 @@
 											required
 										/>
 										<h3 class="registers__group-forms-title">
-											Repeat password
+											Confirm Password
 										</h3>
 										<input
 											type="password"
@@ -114,6 +116,7 @@
 											placeholder="Please Enter Repeat your Password"
 											required
 										/>
+										<p class="checkPass"></p>
 										<!-- <h3 class="registers__group-forms-title">Gender</h3>
                        -->
 										<h4 class="registers__group-forms-title">Birthday</h4>
