@@ -16,7 +16,7 @@
 		<div class="wrapper">
 			<header class="header">
 				<nav class="nav">
-					<img src="img/LOGO.svg" alt="" class="logo" />
+					<a href="{% url 'Home' %}"><img src="{% static 'img/LOGO.svg' %}" alt="" class="logo" /></a>
 					<div class="tabs__btn">
 						<button
 							class="tabs__btn-item tabs__btn-item--active"
@@ -327,7 +327,7 @@
 			<main class="main">
 				<section class="content">
 					<div class="tabs__content">
-							<div
+						<div
 							class="tabs__content-item tabs__content-item--active"
 							id="content-1"
 						>
@@ -375,7 +375,10 @@
 										</li>
 
 										<li class="tabs__content-header-item">
-											<a href="register.html" class="tabs__content-header-link user">
+											<a
+												href="{%  url 'Registration'  %}"
+												class="tabs__content-header-link user"
+											>
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
 													width="25"
