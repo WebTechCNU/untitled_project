@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("style.css");
+:root {
+	--bg-color: #1a1c26;
+	--bg-color-blackwhite: #272932;
+	--color-text: #8c67f6;
+	--color-disable: #67696f;
+	--font: 'Montserrat', sans-serif;
+	--colorBtn: #7940cf;
+	--border-radius: 20px;
+}
+
+.registers {
+	display: flex;
+}
+.registers__group-form {
+	width: 40%;
+	height: 100vh;
+	padding: 49px 75px 68px;
+	background-color: var(--bg-color-blackwhite);
+}
+
+.logo-reg {
+	width: 99px;
+	height: 53px;
+	margin-bottom: 62px;
+}
+
+.registers__img {
+	display: block;
+	width: 50%;
+	background: url("../img/reg-photo.jpg") no-repeat center;
+	background-size: cover;
+}
+
+.registers__group-form-btn-group {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.registers__group-form-btn {
+	width: 50%;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	border-bottom: 5px solid var(--color-disable);
+	font-family: var(--font);
+	font-size: 18px;
+	font-weight: 700;
+	transition: all 0.4s;
+}
+
+.registers__group-form-btn--active {
+	padding: 20px 0;
+	color: var(--color-text);
+	border-bottom: 5px solid var(--color-text);
+	border-width: 100%;
+	transition: color, border-bottom 0.4s;
+}
+
+.registers__group-form-content-item {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 60vh;
+	padding: 66px 0;
+	transform: translateX(-100%);
+	visibility: hidden;
+	transition: all 0.4s;
+}
+
+.registers__group-form-content-item--active {
+	display: flex;
+	visibility: visible;
+	transform: translateX(0);
+	transition: all 0.4s;
+}
+
+.registers__group-forms-title {
+	font-size: 16px;
+	font-family: var(--font);
+	color: #fff;
+	font-weight: 600;
+	line-height: 28px;
+	margin-bottom: 15px;
+}
+
+.registers__group-forms-login,
+.registers__group-forms-password,
+.registers__group-form-content-date {
+	width: 471px;
+	height: 62px;
+	margin-bottom: 20px;
+	padding: 0 20px;
+	color: #fff;
+	background-color: var(--bg-color);
+	border-radius: 15px;
+}
+.registers__group-forms-login::placeholder {
+	background: url("../img/Message.svg") no-repeat;
+	background-size: 16px 18px;
+	padding: 0 30px;
+	transition: all 0.5s;
+}
+
+.registers__group-forms-password::placeholder {
+	background: url("../img/Unlock.svg") no-repeat;
+	background-size: 16px 18px;
+	padding: 0 30px;
+	transform: translateX(0);
+	transition: all 0.5s;
+}
+.registers__group-forms-login:focus::placeholder,
+.registers__group-forms-password:focus::placeholder {
+	transform: translateX(-100%);
+	transition: all 0.5s;
+}
+.registers__group-forms-login-forgot {
+	display: block;
+	font-family: var(--font);
+	color: var(--color-text);
+}
+
+.registers__group-form-content-group {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+}
+
+.registers__group-form-content-btn {
+	width: 511px;
+	height: 62px;
+	font-size: 16px;
+	color: #fff;
+	background: linear-gradient(to bottom, #763dcf, #5c24cc);
+	border-radius: 15px;
+	transition: all 0.4s;
+}
+
+.registers__group-form-content-btn:hover {
+	box-shadow: 0 0 15px var(--color-text);
+	transform: scale(1.05);
+	transition: all 0.4s;
+}
+
+.registers__group-form-content-link {
+	color: rgba(236, 236, 236, 0.6);
+	text-align: center;
+}
+
+.registers__group-form-content-item-title {
+	color: #fff;
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+
+.registers__group-form-content-name::placeholder {
+	background: url("../img/Profile.svg") no-repeat;
+}

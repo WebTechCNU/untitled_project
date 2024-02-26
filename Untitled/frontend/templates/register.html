@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="stylesheet" href="{% static 'css/registers.css' %}" />
+
+		<script src="{% static 'js/main.js' %}" defer></script>
+		<script src="{% static 'js/menuBtn.js' %}" defer></script>
+	</head>
+	<body>
+		{% block content %}
+		<div class="wrapper">
+			<main class="main">
+				<section class="registers">
+					<div class="registers__group-form">
+						<a href="{% url 'Home' %}"><img src="{% static 'img/LOGO.svg' %}" alt="" class="logo-reg" /></a>
+
+						<div class="registers__group-form-btn-group">
+							<button
+								class="registers__group-form-btn registers__group-form-btn--active"
+								data-id="login-1"
+							>
+								login
+							</button>
+							<button class="registers__group-form-btn" data-id="signUp-2">
+								sign up
+							</button>
+						</div>
+
+						<div class="registers__group-form-content-group">
+							<div
+								class="registers__group-form-content-item registers__group-form-content-item--active"
+								id="login-1"
+							>
+								<form action="" class="registers__group-forms" id="form-login">
+									<h1 class="registers__group-forms-title">Email Address</h1>
+									<input
+										type="email"
+										class="registers__group-forms-login"
+										id="login__email"
+										placeholder="Please Enter your Email"
+										required
+									/>
+
+									<h2 class="registers__group-forms-title">Password</h2>
+									<input
+										type="password"
+										class="registers__group-forms-password"
+										id="login__pass"
+										placeholder="Please Enter your Password"
+										required
+									/>
+									<a href="" class="registers__group-forms-login-forgot"
+										>Fogot Password?</a
+									>
+								</form>
+								<div class="registers__group-form-content-group">
+									<button
+										type="submit"
+										class="registers__group-form-content-btn"
+										id="login__submit"
+										form="form-login"
+									>
+										Login
+									</button>
+									<a href="" class="registers__group-form-content-link"
+										>Contact Us</a
+									>
+								</div>
+							</div>
+							<div class="registers__group-form-content-item" id="signUp-2">
+								<div class="registers__group-form-content-item-group">
+									<form
+										action=""
+										class="registers__group-form-content-register"
+										id="form-registrtion"
+										onsubmit="return checkUsernameAvailability()"
+									>
+										<h1 class="registers__group-forms-title">Name</h1>
+										<input
+											type="text"
+											class="registers__group-form-content-name registers__group-forms-login"
+											id="registration__name"
+											placeholder="Please Enter your Username"
+											required
+										/>
+										<p class="checkNikname"></p>
+										<h2 class="registers__group-forms-title">Email Address</h2>
+										<input
+											type="email"
+											class="registers__group-forms-login registers__group-form-content-email"
+											id="registration__email"
+											placeholder="Please Enter your Email"
+											required
+										/>
+
+										<h3 class="registers__group-forms-title">Password</h3>
+										<input
+											type="password"
+											class="registers__group-forms-password"
+											id="registration__pass"
+											placeholder="Please Enter your Password"
+											required
+										/>
+										<h3 class="registers__group-forms-title">
+											Confirm Password
+										</h3>
+										<input
+											type="password"
+											class="registers__group-forms-password"
+											id="registration__RepeatPass"
+											placeholder="Please Enter Repeat your Password"
+											required
+										/>
+										<p class="checkPass"></p>
+										<!-- <h3 class="registers__group-forms-title">Gender</h3>
+                       -->
+										<h4 class="registers__group-forms-title">Birthday</h4>
+										<input
+											type="date"
+											name=""
+											id="registration__birthday"
+											value="1700-01-01"
+											min="2018-01-01"
+											max="2024-12-31"
+											class="registers__group-form-content-date"
+										/>
+									</form>
+
+									<button
+										type="submit"
+										class="registers__group-form-content-btn"
+										form="form-registrtion"
+									>
+										Sign Up
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="registers__img"></div>
+				</section>
+			</main>
+		</div>
+		{% endblock %}
+	</body>
+</html>
