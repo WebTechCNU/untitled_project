@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<link rel="stylesheet" href="{% static 'css/favorit.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/registers.css' %}" />
+
+
+		<script src="{% static 'js/favorit.js' %}" defer></script>
+		<script src="{% static 'js/menuBtn.js' %}" defer></script>
+	</head>
+	<body>
+		{% block content %}
+		<div class="wrapper">
+			<main class="main">
+				<section class="registers">
+					<div class="favorit-game">
+						<a href="{% url 'Home' %}"><img src="{% static 'img/LOGO.svg' %}" alt="" class="logo-reg" /></a>
+						<h1 class="favorit-game__title">What’s your Favorite Game</h1>
+						<p class="favorit-game__text">
+							Immerse yourself in the world of entertainment: choose your game
+							and dive into the adventure!
+						</p>
+						<input
+							type="search"
+							name="favoritGame"
+							class="search-favorit"
+							placeholder="Search for favorite game"
+						/>
+						<ul class="favorit-game__list">
+							<li class="favorit-game__item">
+								<img src="" alt="" class="favorit-game__img" />
+								<h2 class="favorit-game__item-title"></h2>
+							</li>
+						</ul>
+						<button class="favorit-game__btn registers__group-form-content-btn">
+							Next
+						</button>
+					</div>
+					<div class="registers__img"></div>
+				</section>
+			</main>
+		</div>
+		{% endblock %}
+	</body>
+</html>

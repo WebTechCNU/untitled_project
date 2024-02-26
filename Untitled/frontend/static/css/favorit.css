@@ -1,0 +1,115 @@
+:root {
+	--bg-color: #1a1c26;
+	--bg-color-blackwhite: #272932;
+	--color-text: #8c67f6;
+	--color-text-white: #fff;
+	--color-disable: #67696f;
+	--font: 'Montserrat', sans-serif;
+	--colorBtn: #7940cf;
+	--border-radius: 20px;
+}
+.favorit-game {
+	width: 100%;
+	aspect-ratio: 1.5;
+	padding: 49px 81px 68px;
+	background-color: var(--bg-color-blackwhite);
+	color: var(--color-text-white);
+}
+
+.favorit-game__title {
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--color-text-white);
+	margin-bottom: 25px;
+}
+
+.favorit-game__text {
+	width: 500px;
+	font-size: 13px;
+	opacity: 0.8;
+	color: var(--color-text-white);
+	margin-bottom: 38px;
+	line-height: 170%;
+}
+
+.search-favorit {
+	display: block;
+	width: 512px;
+	height: 62px;
+	margin: 0 auto 42px;
+	padding: 18px 30px;
+	border-radius: 15px;
+	color: var(--color-text-white);
+	background-color: var(--bg-color);
+}
+.favorit-game__list {
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px 55px;
+	margin-bottom: 61px;
+}
+.favorit-game__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 130px;
+}
+.favorit-game__img {
+	height: 100px;
+	margin-bottom: 15px;
+}
+.favorit-game__item-title {
+	font-size: 14px;
+	text-align: center;
+	color: var(--color-text-white);
+}
+
+.favorit-game__btn {
+	display: block;
+	margin: 0 auto;
+}
+
+.favorit-game__list {
+	width: 500px;
+	/* height: 30vh; */
+	height: clamp(20vh, 50vh - 20%, 50vh);
+	grid-template-columns: repeat(3, 1fr);
+	gap: 14px 10px;
+	margin-bottom: 41px;
+	overflow-y: auto;
+}
+
+@media screen and (max-width: 1280px) {
+	.favorit-game {
+		width: 100%;
+		padding: 20px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.favorit-game__list {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 14px 25px;
+		margin-bottom: 51px;
+	}
+}
+
+
+@media screen and (max-width: 588px) {
+	.logo-reg {
+		margin: 0;
+	}
+	.favorit-game__text {
+		width: 100%;
+	}
+	.favorit-game__list {
+		width: 300px;
+		/* height: 40vh; */
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 30px;
+	}
+	.search-favorit {
+		width: 100%;
+	}
+}

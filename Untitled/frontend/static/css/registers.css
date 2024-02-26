@@ -1,35 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url("style.css");
-:root {
-	--bg-color: #1a1c26;
-	--bg-color-blackwhite: #272932;
-	--color-text: #8c67f6;
-	--color-disable: #67696f;
-	--font: 'Montserrat', sans-serif;
-	--colorBtn: #7940cf;
-	--border-radius: 20px;
-}
-
 .registers {
 	display: flex;
+	height: 100vh;
 }
 .registers__group-form {
-	width: 40%;
-	height: 100vh;
-	padding: 49px 75px 68px;
+	width: 60%;
+	padding: 49px 45px 28px;
 	background-color: var(--bg-color-blackwhite);
 }
 
 .logo-reg {
 	width: 99px;
 	height: 53px;
-	margin-bottom: 62px;
+	margin-bottom: 52px;
 }
 
 .registers__img {
 	display: block;
-	width: 50%;
-	background: url("../img/reg-photo.jpg") no-repeat center;
+	width: 60%;
+	background: url('../img/reg-photo.jpg') no-repeat center;
 	background-size: cover;
 }
 
@@ -65,7 +53,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	height: 60vh;
+	/* aspect-ratio: 1; */
+	height: 800px;
 	padding: 66px 0;
 	transform: translateX(-100%);
 	visibility: hidden;
@@ -100,14 +89,14 @@
 	border-radius: 15px;
 }
 .registers__group-forms-login::placeholder {
-	background: url("../img/Message.svg") no-repeat;
+	background: url('../img/Message.svg') no-repeat;
 	background-size: 16px 18px;
 	padding: 0 30px;
 	transition: all 0.5s;
 }
 
 .registers__group-forms-password::placeholder {
-	background: url("../img/Unlock.svg") no-repeat;
+	background: url('../img/Unlock.svg') no-repeat;
 	background-size: 16px 18px;
 	padding: 0 30px;
 	transform: translateX(0);
@@ -159,5 +148,78 @@
 }
 
 .registers__group-form-content-name::placeholder {
-	background: url("../img/Profile.svg") no-repeat;
+	background: url('../img/Profile.svg') no-repeat;
+}
+
+@media screen and (max-width: 1280px) {
+	.registers__group-form-content-register {
+		height: clamp(20vh, 50vh - 10%, 70vh);
+		overflow-y: auto;
+		margin-bottom: 40px;
+	}
+	.registers__group-forms {
+		margin-bottom: 40px;
+	}
+	.registers__group-form-content-item {
+		height: clamp(20vh, 50vh - 10%, 70vh);
+	}
+}
+@media screen and (max-width: 1024px) {
+	.registers__group-form {
+		width: 100%;
+		/* width: clamp(22.5rem, 56.41vw + 9.808rem, 77.5rem); */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.registers__img {
+		display: none;
+		width: 0;
+		background: none;
+	}
+	/* .registers__group-forms-login,
+	.registers__group-forms-password,
+	.registers__group-form-content-date {
+		width: 371px;
+	} */
+	.registers__group-forms-title {
+		width: 60%;
+		font-size: clamp(1rem, 1rem + 0vw, 1rem);
+	}
+	.registers__group-form-content-item-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 588px) {
+	.logo-reg {
+		margin: 0;
+	}
+	.registers__group-form {
+		padding: 20px;
+	}
+	.registers__group-forms,
+	.registers__group-forms input {
+		width: 100%;
+	}
+	.registers__group-form-content-btn {
+		width: 311px;
+	}
+	.registers__group-form-content-item {
+		padding: 30px 0;
+		height: 500px;
+	}
+	.registers__group-form-content-item-group,
+	.registers__group-form-content-register,
+	.registers__group-form-content-register input {
+		width: 100%;
+		gap: 20px;
+	}
+	.registers__group-form-content-register {
+		height: 400px;
+		overflow-y: auto;
+	}
 }

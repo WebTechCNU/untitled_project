@@ -5,3 +5,6 @@ def main_view(request):
 
 def register(request):
      return render(request, 'register.html')
+
+def favorit(request):
+     return render(request, 'favorit.html')
