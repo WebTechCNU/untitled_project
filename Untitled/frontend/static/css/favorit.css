@@ -9,7 +9,7 @@
 	--border-radius: 20px;
 }
 .favorit-game {
-	width: 100%;
+	width: 50%;
 	aspect-ratio: 1.5;
 	padding: 49px 81px 68px;
 	background-color: var(--bg-color-blackwhite);
@@ -45,6 +45,7 @@
 .favorit-game__list {
 	display: grid;
 	width: 500px;
+	height: clamp(300px, 500px + 20%, 600px);
 	margin: 0 auto;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px 55px;
@@ -71,19 +72,8 @@
 	margin: 0 auto;
 }
 
-.favorit-game__list {
-	width: 500px;
-	/* height: 30vh; */
-	height: clamp(20vh, 50vh - 20%, 50vh);
-	grid-template-columns: repeat(3, 1fr);
-	gap: 14px 10px;
-	margin-bottom: 41px;
-	overflow-y: auto;
-}
-
 @media screen and (max-width: 1280px) {
 	.favorit-game {
-		width: 100%;
 		padding: 20px;
 	}
 }
@@ -95,7 +85,6 @@
 	}
 }
 
-
 @media screen and (max-width: 588px) {
 	.logo-reg {
 		margin: 0;
@@ -105,7 +94,6 @@
 	}
 	.favorit-game__list {
 		width: 300px;
-		/* height: 40vh; */
 		grid-template-columns: repeat(2, 1fr);
 		margin-bottom: 30px;
 	}

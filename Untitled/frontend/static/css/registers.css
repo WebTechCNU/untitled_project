@@ -53,8 +53,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	/* aspect-ratio: 1; */
-	height: 800px;
+	height: 600px;
 	padding: 66px 0;
 	transform: translateX(-100%);
 	visibility: hidden;
@@ -151,9 +150,15 @@
 	background: url('../img/Profile.svg') no-repeat;
 }
 
+.registers__group-form-content-register {
+	height: 400px;
+	overflow-y: auto;
+	margin-bottom: 40px;
+}
+
 @media screen and (max-width: 1280px) {
 	.registers__group-form-content-register {
-		height: clamp(20vh, 50vh - 10%, 70vh);
+		height: 350px;
 		overflow-y: auto;
 		margin-bottom: 40px;
 	}
@@ -161,13 +166,13 @@
 		margin-bottom: 40px;
 	}
 	.registers__group-form-content-item {
-		height: clamp(20vh, 50vh - 10%, 70vh);
+		height: clamp(20vh, 40vh - 10%, 70vh);
 	}
 }
 @media screen and (max-width: 1024px) {
 	.registers__group-form {
 		width: 100%;
-		/* width: clamp(22.5rem, 56.41vw + 9.808rem, 77.5rem); */
+		/* height: clamp(22.5rem, 56.41vw + 9.808rem, 77.5rem); */
 	}
 }
 
@@ -219,7 +224,8 @@
 		gap: 20px;
 	}
 	.registers__group-form-content-register {
-		height: 400px;
+		/* height: 300px; */
+		height: clamp(22.5rem, 56.41vw + 9.808rem, 77.5rem);
 		overflow-y: auto;
-	}
+		margin-bottom: 25px;
 }

@@ -6,9 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 
-		<link rel="stylesheet" href="{% static 'css/favorit.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 		<link rel="stylesheet" href="{% static 'css/registers.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/favorit.css' %}" />
 
 
 		<script src="{% static 'js/favorit.js' %}" defer></script>
@@ -20,7 +20,11 @@
 			<main class="main">
 				<section class="registers">
 					<div class="favorit-game">
-						<a href="{% url 'Home' %}"><img src="{% static 'img/LOGO.svg' %}" alt="" class="logo-reg" /></a>
+
+						<a href="{% url 'Home' %}">
+							<img src="{% static 'img/LOGO.svg' %}" alt="" class="logo-reg" />
+						</a>
+
 						<h1 class="favorit-game__title">What’s your Favorite Game</h1>
 						<p class="favorit-game__text">
 							Immerse yourself in the world of entertainment: choose your game
