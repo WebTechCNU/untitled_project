@@ -48,11 +48,18 @@
 	transition: color, border-bottom 0.4s;
 }
 
+.registers__group-form-content-register {
+	height: 400px;
+	overflow-y: auto;
+	margin-bottom: 30px;
+}
+
 .registers__group-form-content-item {
 	display: none;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	/* aspect-ratio: 1; */
 	height: 600px;
 	padding: 66px 0;
 	transform: translateX(-100%);
@@ -150,29 +157,19 @@
 	background: url('../img/Profile.svg') no-repeat;
 }
 
-.registers__group-form-content-register {
-	height: 400px;
-	overflow-y: auto;
-	margin-bottom: 40px;
-}
-
 @media screen and (max-width: 1280px) {
 	.registers__group-form-content-register {
-		height: 350px;
+		height: clamp(20vh, 50vh - 10%, 70vh);
 		overflow-y: auto;
 		margin-bottom: 40px;
 	}
 	.registers__group-forms {
 		margin-bottom: 40px;
 	}
-	.registers__group-form-content-item {
-		height: clamp(20vh, 40vh - 10%, 70vh);
-	}
 }
 @media screen and (max-width: 1024px) {
 	.registers__group-form {
 		width: 100%;
-		/* height: clamp(22.5rem, 56.41vw + 9.808rem, 77.5rem); */
 	}
 }
 
@@ -182,11 +179,7 @@
 		width: 0;
 		background: none;
 	}
-	/* .registers__group-forms-login,
-	.registers__group-forms-password,
-	.registers__group-form-content-date {
-		width: 371px;
-	} */
+
 	.registers__group-forms-title {
 		width: 60%;
 		font-size: clamp(1rem, 1rem + 0vw, 1rem);
@@ -215,7 +208,7 @@
 	}
 	.registers__group-form-content-item {
 		padding: 30px 0;
-		height: 500px;
+		height: 400px;
 	}
 	.registers__group-form-content-item-group,
 	.registers__group-form-content-register,
@@ -224,8 +217,14 @@
 		gap: 20px;
 	}
 	.registers__group-form-content-register {
-		/* height: 300px; */
-		height: clamp(22.5rem, 56.41vw + 9.808rem, 77.5rem);
+		height: 500px;
 		overflow-y: auto;
-		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.registers__group-form-content-register {
+		height: 50vh;
+		overflow-y: auto;
+	}
 }
